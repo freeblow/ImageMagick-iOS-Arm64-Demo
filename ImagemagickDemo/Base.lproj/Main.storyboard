@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G3d-0X-SjE">
+                                <rect key="frame" x="76.666666666666686" y="118" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Qi4-aF-cWu"/>
+                                    <constraint firstAttribute="height" constant="128" id="XT1-pS-8ag"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="转码的格式(默认jpg)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uO3-zZ-d0k">
+                                <rect key="frame" x="106.66666666666669" y="266" width="180" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="zcI-nB-yLN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDO-eD-oN3">
+                                <rect key="frame" x="159" y="325" width="75" height="35"/>
+                                <color key="backgroundColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="QfN-cC-MJ1"/>
+                                    <constraint firstAttribute="height" constant="35" id="VGy-dL-u7y"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="转码">
+                                    <color key="baseForegroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="convertClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mM3-LN-fFn"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HYB-8k-unF">
+                                <rect key="frame" x="76.666666666666686" y="385" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="0xZ-LP-tDC"/>
+                                    <constraint firstAttribute="height" constant="128" id="W05-M5-ODA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uO3-zZ-d0k" firstAttribute="top" secondItem="G3d-0X-SjE" secondAttribute="bottom" constant="20" id="5zg-Mr-r3i"/>
+                            <constraint firstItem="uO3-zZ-d0k" firstAttribute="centerX" secondItem="G3d-0X-SjE" secondAttribute="centerX" id="GPq-tz-Iam"/>
+                            <constraint firstItem="HYB-8k-unF" firstAttribute="top" secondItem="fDO-eD-oN3" secondAttribute="bottom" constant="25" id="INp-AA-Mn5"/>
+                            <constraint firstItem="G3d-0X-SjE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="O16-et-4zT"/>
+                            <constraint firstItem="G3d-0X-SjE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aVs-YO-n6O"/>
+                            <constraint firstItem="fDO-eD-oN3" firstAttribute="top" secondItem="uO3-zZ-d0k" secondAttribute="bottom" constant="25" id="d7d-EL-nFI"/>
+                            <constraint firstItem="HYB-8k-unF" firstAttribute="centerX" secondItem="uO3-zZ-d0k" secondAttribute="centerX" id="dLG-Gs-jaB"/>
+                            <constraint firstItem="fDO-eD-oN3" firstAttribute="centerX" secondItem="uO3-zZ-d0k" secondAttribute="centerX" id="gU7-BT-rwg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="convertBtn" destination="fDO-eD-oN3" id="1p6-Rm-ZKD"/>
+                        <outlet property="extensionTextField" destination="uO3-zZ-d0k" id="wMH-M3-WOI"/>
+                        <outlet property="originalImageView" destination="G3d-0X-SjE" id="VEd-hs-36I"/>
+                        <outlet property="resultImageView" destination="HYB-8k-unF" id="pBO-37-PIB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
